@@ -1,0 +1,40 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+
+buildscript {
+    repositories {
+        jcenter()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:2.3.3'
+        //添加apt插件
+        classpath 'com.neenbedankt.gradle.plugins:android-apt:1.8'
+
+        // NOTE: Do not place your application dependencies here; they belong
+        // in the individual module build.gradle files
+    }
+}
+
+allprojects {
+    repositories {
+        jcenter()
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
+
+ext {
+    compileSdkVersion = 26
+    buildToolsVersion = '26.0.1'
+    applicationId = 'com.wangchang.daggerandroid'
+    minSdkVersion = 15
+    targetSdkVersion = 26
+    versionCode = 1
+    versionName = '1.0'
+    //App dependencies
+    supportLibraryVersion = '25.3.1'
+    espressoVersion='2.2.2'
+    junitVersion='4.12'
+    daggerVersion='2.4'
+}
