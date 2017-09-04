@@ -19,6 +19,7 @@ public class ActivityModule {
     Test2 provideTest() {
         return new Test2();
     }
+
     private  BaseView view;
 
     public ActivityModule(BaseView view){
@@ -26,10 +27,8 @@ public class ActivityModule {
     }
 
     @Provides
-    BaseView provideILogView(){
+    BaseView provideMainView(){
         return view ;
     }
-
-    private AppCompatActivity activity;
 
    }
