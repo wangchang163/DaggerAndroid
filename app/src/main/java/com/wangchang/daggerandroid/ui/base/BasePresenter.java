@@ -1,4 +1,4 @@
-package com.wangchang.daggerandroid.ui;
+package com.wangchang.daggerandroid.ui.base;
 
 import com.wangchang.daggerandroid.di.PerActivity;
 
@@ -8,5 +8,6 @@ import com.wangchang.daggerandroid.di.PerActivity;
 
 @PerActivity
 public interface BasePresenter {
-    void showMsg();
+
+
 }

@@ -1,7 +1,7 @@
 package com.wangchang.daggerandroid.di.module;
 
 
-import com.wangchang.daggerandroid.ui.BaseView;
+import com.wangchang.daggerandroid.ui.base.BaseView;
 import com.wangchang.daggerandroid.utils.Test2;
 
 import dagger.Module;

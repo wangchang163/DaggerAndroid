@@ -2,7 +2,7 @@ package com.wangchang.daggerandroid.di.component;
 
 import com.wangchang.daggerandroid.di.PerActivity;
 import com.wangchang.daggerandroid.di.module.ActivityModule;
-import com.wangchang.daggerandroid.ui.MainActivity;
+import com.wangchang.daggerandroid.ui.main.MainActivity;
 
 
 import dagger.Component;
