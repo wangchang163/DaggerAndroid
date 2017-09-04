@@ -26,8 +26,7 @@ public class ActivityModule {
     }
 
     @Provides
-    BaseView provideMainView(){
-        return view ;
+    MainPresenter provideMainPresenter(){
+        return new MainPresenter(view);
     }
-
-   }
+}

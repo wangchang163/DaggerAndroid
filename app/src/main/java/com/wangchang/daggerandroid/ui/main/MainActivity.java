@@ -19,8 +19,6 @@ public class MainActivity extends BaseActivity<MainPresenter> implements MainVie
     Test test;
     @Inject
     Test2 test2;
-    @Inject
-    MainPresenter presenter;
     private TextView text,text2;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,7 +29,7 @@ public class MainActivity extends BaseActivity<MainPresenter> implements MainVie
     }
 
     private void initView() {
-        presenter.showMsg();
+        presenter.sayHello();
         text= (TextView) findViewById(R.id.tv_text);
         text.setText(test.getStr());
         text2= (TextView) findViewById(R.id.tv_text2);
@@ -46,8 +44,8 @@ public class MainActivity extends BaseActivity<MainPresenter> implements MainVie
     }
 
     @Override
-    public void showMsg(String string) {
-        Toast.makeText(this,string,Toast.LENGTH_SHORT).show();
+    public void showMsg() {
+        Toast.makeText(this,"测试mvp中Dagger的使用",Toast.LENGTH_SHORT).show();
     }
 
 }

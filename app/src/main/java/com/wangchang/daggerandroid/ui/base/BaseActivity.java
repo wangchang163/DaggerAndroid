@@ -10,6 +10,7 @@ import com.wangchang.daggerandroid.di.component.DaggerActivityComponent;
 import com.wangchang.daggerandroid.di.module.ActivityModule;
 import com.wangchang.daggerandroid.utils.CommonUtils;
 
+import javax.inject.Inject;
 
 
 /**
@@ -20,6 +21,8 @@ public class BaseActivity<T extends BasePresenter> extends AppCompatActivity imp
 
     private ActivityComponent mActivityComponent;
     private ProgressDialog mProgressDialog;
+    @Inject
+    protected T presenter;
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

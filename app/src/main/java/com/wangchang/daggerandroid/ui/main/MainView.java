@@ -8,5 +8,5 @@ import com.wangchang.daggerandroid.ui.base.BaseView;
 
 public interface MainView extends BaseView {
 
-    void showMsg(String string);
+    void showMsg();
 }

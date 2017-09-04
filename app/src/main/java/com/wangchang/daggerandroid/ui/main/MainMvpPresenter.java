@@ -7,5 +7,5 @@ import com.wangchang.daggerandroid.ui.base.BasePresenter;
  */
 
 public interface MainMvpPresenter extends BasePresenter{
-    void showMsg();
+    void sayHello();
 }

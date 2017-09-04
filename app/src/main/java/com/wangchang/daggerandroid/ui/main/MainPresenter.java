@@ -12,13 +12,13 @@ import javax.inject.Inject;
 public class MainPresenter implements MainMvpPresenter {
 
     private MainView view;
-    @Inject
+
     public MainPresenter(BaseView mainView) {
         view= (MainView) mainView;
     }
 
     @Override
-    public void showMsg() {
-       view.showMsg("測試Dagger的实现");
+    public void sayHello() {
+       view.showMsg();
     }
 }
