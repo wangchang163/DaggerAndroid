@@ -1,12 +1,16 @@
 package com.wangchang.daggerandroid.ui;
 
+import android.content.Context;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.TextView;
+import android.widget.Toast;
 
+import com.wangchang.daggerandroid.MyApplication;
 import com.wangchang.daggerandroid.R;
 import com.wangchang.daggerandroid.di.component.DaggerActivityComponent;
 import com.wangchang.daggerandroid.di.module.ActivityModule;
+import com.wangchang.daggerandroid.di.module.ApplicationModule;
 import com.wangchang.daggerandroid.utils.Test;
 import com.wangchang.daggerandroid.utils.Test2;
 
@@ -27,7 +31,7 @@ public class MainActivity extends AppCompatActivity implements MainView{
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         DaggerActivityComponent.builder()
-                .activityModule(new ActivityModule((BaseView) this))
+                .activityModule(new ActivityModule(this))
                 .build()
                 .inject(this);
         initView();
@@ -43,7 +47,7 @@ public class MainActivity extends AppCompatActivity implements MainView{
 
     @Override
     public void showLoading() {
-
+        Toast.makeText(this,"Dagger测试",Toast.LENGTH_SHORT).show();
     }
 
     @Override

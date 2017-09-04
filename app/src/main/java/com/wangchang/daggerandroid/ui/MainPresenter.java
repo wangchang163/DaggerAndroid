@@ -9,15 +9,14 @@ import javax.inject.Inject;
 
 public class MainPresenter implements BasePresenter{
 
-    private MainView view;
+    private BaseView view;
     @Inject
     public MainPresenter(BaseView mainView) {
-        view= (MainView) mainView;
+        view=mainView;
     }
 
     @Override
     public void showMsg() {
         view.showLoading();
-      System.out.print("aaaa");
     }
 }

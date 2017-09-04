@@ -1,9 +1,7 @@
 package com.wangchang.daggerandroid.di.module;
 
-import android.support.v7.app.AppCompatActivity;
 
 import com.wangchang.daggerandroid.ui.BaseView;
-import com.wangchang.daggerandroid.ui.MainView;
 import com.wangchang.daggerandroid.utils.Test2;
 
 import dagger.Module;
